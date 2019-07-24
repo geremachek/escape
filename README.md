@@ -9,4 +9,5 @@ go get -u github.com/geremachek/escape
 
 # usage
 
-look at the code
+```func Vint(ints ...int) string```
+```func Vint(strs ...string) string```
