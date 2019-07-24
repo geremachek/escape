@@ -11,4 +11,4 @@ go get -u github.com/geremachek/escape
 
 ```func Vint(ints ...int) string```
 
-```func Vint(strs ...string) string```
+```func Vstr(strs ...string) string```
