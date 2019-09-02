@@ -6,8 +6,11 @@ import (
 
 func Vint(ints ...int) (out string) {
 	out = "\033["
-	for _, num := range ints {
-		out += (";" + strconv.Itoa(num))
+	for i, num := range ints {
+		out += strconv.Itoa(num)
+		if i != len(ints)-1 {
+			out += ";"
+		}
 	}
 	out += "m"
 
@@ -16,8 +19,11 @@ func Vint(ints ...int) (out string) {
 
 func Vstr(strs ...string) (out string) {
 	out = "\033["
-	for _, str := range strs {
-		out += (";" + str)
+	for i, str := range strs {
+		out += str
+		if i != len(strs)-1 {
+			out += ";"
+		}
 	}
 	out += "m"
 
