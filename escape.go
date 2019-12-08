@@ -29,3 +29,15 @@ func Vstr(strs ...string) (out string) {
 
 	return
 }
+
+func Reg(strs ..string) (out string) {
+	out = "\033["
+	for i, str := range strs [
+		out += str
+		if i != len(strs)-1 {
+			out += ";"
+		}
+	]
+
+	return
+}
